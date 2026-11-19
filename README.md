@@ -47,25 +47,25 @@ A complete, functional, local-first AI livestream clipping and automatic video e
 
 ## 🚀 Quick Start Guide
 
-### 1. Requirements
-- Python 3.10+ (tested on Python 3.14)
-- Node.js 18+ (tested on Node v24)
-- FFmpeg (with `libass` and `libx264` support)
-
-### 2. Backend Server
-From the project root:
-```bash
-python backend/run_server.py
+### 1. One-Click Setup & Dependency Check (Windows)
+Double-click `install.bat` (or run in terminal):
+```cmd
+install.bat
 ```
-*Backend runs at `http://127.0.0.1:8000`.*
+This script automatically:
+- Checks prerequisites (**Python 3.10+**, **Node.js LTS**, **npm**, and **FFmpeg**).
+- Upgrades `pip` and installs all backend Python packages from `requirements.txt`.
+- Installs frontend packages and compiles the React production dashboard.
+- Ensures all local folder structures exist (`GTA6-Clips/Raw`, `Processed`, `Approved`, `Rejected`, `Thumbnails`, `Metadata`).
+- Prepares a test stream sample if not already present.
 
-### 3. Frontend Dashboard
-From the `frontend/` directory:
-```bash
-cd frontend
-npm run dev
+### 2. Launch the Application
+Double-click `start_app.bat`:
+```cmd
+start_app.bat
 ```
-*Frontend runs at `http://127.0.0.1:5173` (proxied to backend) or directly via `http://127.0.0.1:8000` (pre-built production bundle).*
+* The Vite Dashboard starts on: `http://127.0.0.1:5173`
+* The FastAPI backend runs on: `http://127.0.0.1:8000`
 
 ---
 
